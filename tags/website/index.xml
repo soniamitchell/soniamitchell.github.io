@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>website on Sonia Mitchell</title>
+    <link>/tags/website/</link>
+    <description>Recent content in website on Sonia Mitchell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Build a website in Hugo</title>
+      <link>/post/2020-11-04-hugo-website/</link>
+      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-11-04-hugo-website/</guid>
+      <description>Step 1 - Creating your website locally We&amp;rsquo;re going to do this on a Mac. Things might be a bit different if you&amp;rsquo;re using Windows, so be aware of that.
+First you need to install hugo. You can do this in the terminal:
+brew install hugo Now decide where you want your website to be created. I like to keep all my work in a Desktop folder called git. Go to this directory.</description>
+    </item>
+    
+  </channel>
+</rss>

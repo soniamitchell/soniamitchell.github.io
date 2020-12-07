@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Sonia Mitchell</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Sonia Mitchell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Embed an interactive R console in Hugo</title>
+      <link>/post/2020-11-18-rrdr.io/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-11-18-rrdr.io/</guid>
+      <description>A comprehensive index of R packages and documentation from CRAN, Bioconductor, GitHub and R-Forge.
+ rdrr.io is a very interesting website to play around with. Not only an exhaustive index of R packages and documentation, it is capable of running R directly from your browser or within an R Notebook. The implementation comes preloaded with over 12,000 packages, which is very impressive indeed.
+If you want to embed interactive R code in your Hugo website&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Live Share in Visual Studio Code</title>
+      <link>/post/2020-11-06-vscode-liveshare/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-11-06-vscode-liveshare/</guid>
+      <description>The Visual Studio Code (VS Code) Live Share extension provides a great way to collaborate on code whilst working from home. Assuming read/write access is enabled, you and your team mates can edit code, highlight sections of it, save it, and run it in real-time.
+Just bear in mind that when code is run, it is run locally, which means you won&amp;rsquo;t have access to any objects that aren&amp;rsquo;t in your own environment or datasets that aren&amp;rsquo;t on your own machine.</description>
+    </item>
+    
+    <item>
+      <title>Build a website in Hugo</title>
+      <link>/post/2020-11-04-hugo-website/</link>
+      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-11-04-hugo-website/</guid>
+      <description>Step 1 - Creating your website locally We&amp;rsquo;re going to do this on a Mac. Things might be a bit different if you&amp;rsquo;re using Windows, so be aware of that.
+First you need to install hugo. You can do this in the terminal:
+brew install hugo Now decide where you want your website to be created. I like to keep all my work in a Desktop folder called git. Go to this directory.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Build a website in Hugo - Sonia Mitchell</title>
+  <meta name="description" content="A how to guide">
+  <meta name="author" content="Sonia Mitchell"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Sonia Mitchell",
+    
+    "url": "\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "\/post\/2020-11-04-hugo-website\/",
+          "name": "Build a website in hugo"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Sonia Mitchell"
+  },
+  "headline": "Build a website in Hugo",
+  "description" : "Step 1 - Creating your website locally We\x26rsquo;re going to do this on a Mac. Things might be a bit different if you\x26rsquo;re using Windows, so be aware of that.\nFirst you need to install hugo. You can do this in the terminal:\nbrew install hugo Now decide where you want your website to be created. I like to keep all my work in a Desktop folder called git. Go to this directory.",
+  "inLanguage" : "en",
+  "wordCount":  657 ,
+  "datePublished" : "2020-11-04T00:00:00",
+  "dateModified" : "2020-11-04T00:00:00",
+  "image" : "\/img\/avatar-icon.png",
+  "keywords" : [ "Hugo, website, custom domain" ],
+  "mainEntityOfPage" : "\/post\/2020-11-04-hugo-website\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Build a website in Hugo" />
+<meta property="og:description" content="A how to guide">
+<meta property="og:image" content="/img/avatar-icon.png" />
+<meta property="og:url" content="/post/2020-11-04-hugo-website/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sonia Mitchell" />
+
+  <meta name="twitter:title" content="Build a website in Hugo" />
+  <meta name="twitter:description" content="A how to guide">
+  <meta name="twitter:image" content="/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@sonianmitchell" />
+  <meta name="twitter:creator" content="@sonianmitchell" />
+  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.68.3" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Sonia Mitchell"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="/css/highlight.min.css" /><link rel="stylesheet" href="/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Sonia Mitchell</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Things" href="/page/things/">Things</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Sonia Mitchell" href="/">
+            <img class="avatar-img" src="/img/avatar-icon.png" alt="Sonia Mitchell" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Build a website in Hugo</h1>
+              
+              
+              
+                
+                  <h2 class="post-subheading">A how to guide</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on November 4, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;657&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Sonia Mitchell
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h2 id="step-1---creating-your-website-locally">Step 1 - Creating your website locally</h2>
+<p>We&rsquo;re going to do this on a Mac. Things might be a bit different if you&rsquo;re using Windows, so be aware of that.</p>
+<p>First you need to install hugo. You can do this in the terminal:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">brew install hugo
+</code></pre></div><p>Now decide where you want your website to be created. I like to keep all my work in a Desktop folder called git. Go to this directory.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Desktop/git/
+</code></pre></div><p>To create a new website, run:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo new site my_site_name
+</code></pre></div><p>This will create a new directory called <code>my_site_name</code>, which should look like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">my_site_name/
+    archetypes/
+        default.md
+    content/
+    data/
+    layout/
+    static/
+    themes/
+    config.toml
+</code></pre></div><p>The next thing to do is pick a theme. You want your website to look good! So go to <a href="https://themes.gohugo.io">https://themes.gohugo.io</a>, find a nice theme, and go to its homepage. I&rsquo;ve chosen the Erblog theme. Hopefully, you&rsquo;re now in a <a href="https://github.com/ertuil/erblog">GitHub repository</a>. Click on the green &ldquo;Code&rdquo; button and download the repository as a ZIP file. You should now have a folder in Downloads called <code>erblog-master</code>. Rename it as <code>erblog</code> and put it in <code>themes/</code>.</p>
+<p>Now we need to do a bit of copy and pasting. Copy the contents of <code>erblog/exampleSite/config.toml</code> and paste it into <code>config.toml</code>. Likewise, copy the files in <code>ghostwriter/exampleSite/content/</code> into <code>content/</code>. You&rsquo;re now ready to build your site!</p>
+<p>To build it locally, go into your website directory</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> my_site_name
+</code></pre></div><p>and run</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo server
+</code></pre></div><p>You&rsquo;ll get a message saying your website is available at <code>localhost:1313/</code>. Copy this link in your browser to see what your website looks like. It looks great!</p>
+<p>Note that <code>content/</code> holds the contents of your website. You might want to tinker about with these, as well as your <code>config.toml</code> file to customise your website. Any saved changes you make should automatically rebuild the site in your browser. Unless something goes wrong&hellip; or you press Ctrl+C to break the connection.</p>
+<h2 id="step-2---creating-your-website-remotely">Step 2 - Creating your website remotely</h2>
+<p>Now that your website is full of great content, we should put it online. You can do that for free if you have a GitHub account.</p>
+<p>So, go to GitHub - hopefully you already have an account – and make a new repository. I&rsquo;ve named mine <code>hugo_source_files</code>. Initialise <code>my_site_name/</code> as a local repository and push its contents to your new hugo_source_files repository on GitHub. Now your files are backed up on GitHub, but your website isn&rsquo;t online yet. We want our website to build itself automatically. So the next step is to ask GitHub to do this for us.</p>
+<p>First, you need to make a secret. So in GitHub, go to &ldquo;Settings&rdquo;, then &ldquo;Developer settings&rdquo;, then &ldquo;Personal access tokens&rdquo;, and &ldquo;Generate new token&rdquo;. Type <code>HUGO_TOKEN</code> in the Note section and check the box next to &ldquo;repo&rdquo; in &ldquo;Select scopes&rdquo;. Scroll down and click &ldquo;Generate token&rdquo;. This will generate an alphanumeric string, 40 characters long (this is your PAT). Copy it or click on the little clipboard icon. Now go back to your <code>hugo_source_files</code> repository. Go to &ldquo;Settings&rdquo;, then &ldquo;Secrets&rdquo;, and &ldquo;New secret&rdquo;. Make the name <code>HUGO_TOKEN</code>, paste your PAT into the value box, and click &ldquo;Add secret&rdquo;.</p>
+<p>Next, create a second repository on GitHub called <code>github_user_name.github.io</code>, replacing github_user_name with whatever your GitHub username is.</p>
+<p>And finally, go back to <code>my_site_name/</code> and create a new directory called <code>.github/</code>, in here create a new file called <code>build.yaml</code> containing:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">name</span><span class="p">:</span><span class="w"> </span>Build<span class="w"> </span>and<span class="w"> </span>Deploy<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">on</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">push</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">branches</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- master<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">jobs</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">build</span><span class="p">:</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="k">runs-on</span><span class="p">:</span><span class="w"> </span>ubuntu-latest<span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="k">steps</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Checkout<span class="w"> </span>master<span class="w">
+</span><span class="w">      </span><span class="k">uses</span><span class="p">:</span><span class="w"> </span>actions/checkout@v1<span class="w">
+</span><span class="w">      </span><span class="k">with</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Hugo<span class="w"> </span>Deploy<span class="w"> </span>GitHub<span class="w"> </span>Pages<span class="w">
+</span><span class="w">      </span><span class="k">uses</span><span class="p">:</span><span class="w"> </span>benmatselby/hugo-deploy-gh-pages@master<span class="w">
+</span><span class="w">      </span><span class="k">env</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">HUGO_VERSION</span><span class="p">:</span><span class="w"> </span><span class="m">0.68.3</span><span class="w">
+</span><span class="w">        </span><span class="k">TARGET_REPO</span><span class="p">:</span><span class="w"> </span>soniamitchell/soniamitchell.github.io<span class="w">
+</span><span class="w">        </span><span class="k">TOKEN</span><span class="p">:</span><span class="w"> </span>${{<span class="w"> </span>secrets.HUGO_TOKEN<span class="w"> </span>}}<span class="w">
+</span></code></pre></div><p>There are two things to notice here. <code>TARGET_REPO</code> should point to <code>github_user_name/github_user_name.github.io</code> and <code>TOKEN</code> references your <code>HUGO_TOKEN</code> secret.</p>
+<p>Now push this file to your <code>hugo_source_files</code> repository.</p>
+<h2 id="step-3---linking-to-a-private-domain">Step 3 - Linking to a private domain</h2>
+<p>Go to settings and put your custom domain in custom domain. This will create a <code>CNAME</code> file. Now add an extra field to the end of your <code>build.yaml</code> file like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Hugo<span class="w"> </span>Deploy<span class="w"> </span>GitHub<span class="w"> </span>Pages<span class="w">
+</span><span class="w">      </span><span class="k">uses</span><span class="p">:</span><span class="w"> </span>benmatselby/hugo-deploy-gh-pages@master<span class="w">
+</span><span class="w">      </span><span class="k">env</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">HUGO_VERSION</span><span class="p">:</span><span class="w"> </span><span class="m">0.68.3</span><span class="w">
+</span><span class="w">        </span><span class="k">TARGET_REPO</span><span class="p">:</span><span class="w"> </span>soniamitchell/soniamitchell.github.io<span class="w">
+</span><span class="w">        </span><span class="k">TOKEN</span><span class="p">:</span><span class="w"> </span>${{<span class="w"> </span>secrets.HUGO_TOKEN<span class="w"> </span>}}<span class="w">
+</span><span class="w">        </span><span class="k">CNAME</span><span class="p">:</span><span class="w"> </span>sonia-mitchell.com<span class="w">
+</span></code></pre></div><p>Copy the contents of this file into the <code>CNAME</code> field in <code>build.yaml</code> and push these changes to GitHub. Assuming you have everything set up correctly from your domain provider, your website should be redirected.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="//tags/hugo/">Hugo</a>&nbsp;
+            
+              <a href="//tags/website/">website</a>&nbsp;
+            
+              <a href="//tags/custom-domain/">custom domain</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=%2fpost%2f2020-11-04-hugo-website%2f&amp;text=Build%20a%20website%20in%20Hugo&amp;via=sonianmitchell" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      
+
+      
+      <li>
+        <a href="//reddit.com/submit?url=%2fpost%2f2020-11-04-hugo-website%2f&amp;title=Build%20a%20website%20in%20Hugo" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=%2fpost%2f2020-11-04-hugo-website%2f&amp;title=Build%20a%20website%20in%20Hugo" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=%2fpost%2f2020-11-04-hugo-website%2f&amp;description=Build%20a%20website%20in%20Hugo" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2020-11-18-rrdr.io/">Embed an interactive R console in Hugo</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="/post/2020-11-06-vscode-liveshare/" data-toggle="tooltip" data-placement="top" title="Live Share in Visual Studio Code">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/soniamitchell" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/sonianmitchell" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/sonia-mitchell" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Sonia Mitchell
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="/">Sonia Mitchell</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.68.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
